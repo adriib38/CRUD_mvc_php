@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-12-2022 a las 09:03:49
+-- Tiempo de generación: 15-12-2022 a las 08:59:39
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -20,33 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `manganime`
 --
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `manganime`
---
-
-CREATE TABLE `manganime` (
-  `id` int(11) NOT NULL,
-  `nombre` varchar(255) NOT NULL,
-  `creador` varchar(255) NOT NULL,
-  `genero` varchar(255) NOT NULL,
-  `demografia` enum('Kodomo','Shōnen','Shōjo','Seinien','Josei') NOT NULL,
-  `estreno` date DEFAULT NULL,
-  `fin` date DEFAULT NULL,
-  `tomos` int(11) DEFAULT NULL,
-  `capitulos` int(11) DEFAULT NULL,
-  `imagen` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `manganime`
---
-
-INSERT INTO `manganime` (`id`, `nombre`, `creador`, `genero`, `demografia`, `estreno`, `fin`, `tomos`, `capitulos`, `imagen`) VALUES
-(1, 'Dragon Ball', 'Akira Toriyama', 'Acción, aventuras, fantasía', 'Shōnen', '1984-11-20', '1995-06-05', 42, 153, 'dragonball.jpg'),
-(2, 'Naruto', 'Masashi Kishimoto', 'Acción, aventura, comedia, fantasía, Artes marciales', 'Shōnen', '1999-09-21', '2014-11-10', 72, 220, 'naruto.jpg');
 
 -- --------------------------------------------------------
 
@@ -75,12 +48,6 @@ INSERT INTO `personajes` (`id`, `nombre`, `descripcion`, `edad`, `manganime`) VA
 --
 
 --
--- Indices de la tabla `manganime`
---
-ALTER TABLE `manganime`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indices de la tabla `personajes`
 --
 ALTER TABLE `personajes`
@@ -90,12 +57,6 @@ ALTER TABLE `personajes`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
-
---
--- AUTO_INCREMENT de la tabla `manganime`
---
-ALTER TABLE `manganime`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `personajes`

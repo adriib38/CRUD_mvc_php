@@ -20,7 +20,10 @@
 			<li><a href="/buscarPorNombre">Buscar MangAnime por nombre</a></li>
 			<li><a href="/buscarPorDemografia">Buscar MangAnime por demografía</a></li>
 			<li><a href="/buscarCombinada">Búsqueda combinada de MangAnime</a></li>
+			<li><a href="/buscarPersonaje">Buscar personaje por nombre</a></li>
+
 		</ul>
+		
 	 </nav>
 
 	<main>

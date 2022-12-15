@@ -9,6 +9,9 @@ require_once __DIR__ . '/../app/Config.php';
 require_once __DIR__ . '/../app/MangAnime.php';
 require_once __DIR__ . '/../app/MangAnimeController.php';
 
+require_once __DIR__ . '/../app/Personaje.php';
+require_once __DIR__ . '/../app/PersonajesController.php';
+
 /* array asociativo cuya función es definir una tabla para mapear (asociar)
 * rutas en acciones de un controlador.
 * Esta tabla será utilizada para saber qué acción se debe ejecutar
@@ -21,7 +24,12 @@ $map = [
 	'buscarPorNombre' => ['controller' =>'MangAnimeController', 'action' =>'buscarPorNombre'],
 	'buscarPorDemografia' => ['controller' =>'MangAnimeController', 'action' =>'buscarPorDemografia'],
 	'buscarCombinada' => ['controller' =>'MangAnimeController', 'action' =>'buscarCombinada'],
+
+	'personajesManganime' => ['controller' =>'PersonajesController', 'action' =>'personajesManganime'],
+	'buscarPersonaje' => ['controller' =>'PersonajesController', 'action' =>'buscarPersonaje'],
+
 ];
+
 
 // Parseo de la ruta
 if (isset($_GET['accion'])) {

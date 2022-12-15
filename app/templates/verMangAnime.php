@@ -45,6 +45,13 @@
 		<td>Capítulos</td>
 		<td><?=$params['capitulos']?></td>
 	</tr>
+		
+	<tr>
+		<td>Personajes</td>
+		<td><a href="/personajesManganime/<?=$params['id']?>">Ver protagonista</a></td>
+	</tr>
+	
+
 </table>
 
 <?php $contenido = ob_get_clean() ?>
