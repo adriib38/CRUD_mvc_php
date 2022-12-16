@@ -48,7 +48,7 @@
 		
 	<tr>
 		<td>Personajes</td>
-		<td><a href="/personajesManganime/<?=$params['id']?>">Ver protagonista</a></td>
+		<td><a href="/personajesManganime/<?=$params['id']?>">Ver personajes</a></td>
 	</tr>
 	
 

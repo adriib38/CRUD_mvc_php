@@ -1,25 +1,25 @@
-<?php 
-	ob_start();
-	$params = $params[0];
-?>
-<h1><?=strtoupper($params['nombre']) ?></h1>
+<?php ob_start() ?>
 
-<table class="infomanga">
-	<tr>
-		<td>Nombre</td>
-		<td><?=$params['nombre'] ?></td>
-	</tr>
-	<tr>
-		<td>Descripcion</td>
-		<td><?=$params['descripcion'] ?></td>
-	</tr>
-	<tr>
-		<td>Edad</td>
-		<td><?=$params['edad'] ?></td>
-	</tr>
+<?php  foreach($params as $personaje) { ?>
+	<table class="infomanga">
+		<h1><?=strtoupper($personaje['nombre']) ?></h1>
+		<tr>
+			<td>Nombre</td>
+			<td><?=$personaje['nombre'] ?></td>
+		</tr>
+		<tr>
+			<td>Descripcion</td>
+			<td><?=$personaje['descripcion'] ?></td>
+		</tr>
+		<tr>
+			<td>Edad</td>
+			<td><?=$personaje['edad'] ?></td>
+		</tr>
 
+		
+	</table>
+<?php } ?>
 
-</table>
 
 <?php $contenido = ob_get_clean() ?>
 
